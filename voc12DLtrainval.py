@@ -2,24 +2,13 @@ import fiftyone as fo
 import fiftyone.zoo as foz
 from fiftyone import ViewField as F
 
+fo.config.default_ml_backend = "torch"
+
 dataset = foz.load_zoo_dataset(
-    "open-images-v7",
+    "voc-2012",
     splits=("train", "validation"),
     label_types=["detections"],
-    classes=["Airplane",
-             "Bird",
-             "Boat",
-             "Bus",
-             "Cat",
-             "Cattle",
-             "Dog",
-             "Horse",
-             "Motorcycle",
-             "Person",
-             "Sheep",
-             "Train"],
-    drop_existing_dataset=False,
-    max_samples=76151,
+    drop_existing_dataset=False
 )
 
 dataset.persistent = True

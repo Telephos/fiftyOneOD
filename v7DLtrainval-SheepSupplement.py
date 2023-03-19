@@ -6,20 +6,9 @@ dataset = foz.load_zoo_dataset(
     "open-images-v7",
     splits=("train", "validation"),
     label_types=["detections"],
-    classes=["Airplane",
-             "Bird",
-             "Boat",
-             "Bus",
-             "Cat",
-             "Cattle",
-             "Dog",
-             "Horse",
-             "Motorcycle",
-             "Person",
-             "Sheep",
-             "Train"],
+    classes=["Sheep"],
     drop_existing_dataset=False,
-    max_samples=76151,
+    max_samples=50000,
 )
 
 dataset.persistent = True

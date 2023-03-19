@@ -6,7 +6,7 @@ dataset = foz.load_zoo_dataset(
     "coco-2017",
     splits=("train", "validation"),
     label_types=["detections"],
-    # drop_existing_dataset=True
+    # drop_existing_dataset=False
 )
 
 dataset.persistent = True
